@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{trip_name}}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='trip.css') }}">
+	</head>
+	
+	<body>
+		<div class="two-col">
+		<h1 class="col1">{{trip_name}}</h1>
+		<h2 class="col2">{{duration}}</h2>
+		</div>
+		
+		<p>Location: {{location}}</p>
+
+		<h2>Climbers</h2>
+		<div id="climbers"></div>
+
+		<script>
+			let container = document.getElementById("climbers");
+			var climber_data = JSON.parse({{climbers|tojson}});
+
+			for (let i=0; i<climber_data.length; i++){
+				let box = document.createElement("div");
+				box.className = "two-col-climber";
+				
+				let name = document.createElement("h3");
+				name.innerHTML = climber_data[i]["name"];
+				name.className = "col1";
+				box.appendChild(name);
+				
+				let level = document.createElement("h3");
+                                level.innerHTML = climber_data[i]["level"];
+                                level.className = "col2";
+				box.appendChild(level);
+
+				let skills = climber_data[i]["skills"];
+				let skill_container = document.createElement("div");
+				skill_container.className = "col1";
+				let skill_title = document.createElement("h2");
+				skill_title.innerHTML = "Skills";
+				skill_container.appendChild(skill_title);
+				for (let j=0; j<skills.length; j++){
+					let skill = document.createElement("p");
+					skill.innerHTML = skills[j];
+					skill_container.appendChild(skill);
+				}
+				box.appendChild(skill_container);
+
+
+				let gear = climber_data[i]["gear"];
+				let gear_container = document.createElement("div");
+				gear_container.className = "col2";
+				let gear_title = document.createElement("h2");
+				gear_title.innerHTML = "Gear";
+				gear_container.appendChild(gear_title);
+				for (let j=0; j<skills.length; j++){
+					let item = document.createElement("p");
+					item.innerHTML = gear[j];
+					gear_container.appendChild(item);
+				}
+				box.appendChild(gear_container);
+
+				container.appendChild(box);
+			}
+		</script>
+	</body>
+</html>

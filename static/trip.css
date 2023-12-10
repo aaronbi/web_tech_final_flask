@@ -1,0 +1,48 @@
+.two-col {
+    overflow: hidden;/* Makes this div contain its floats */
+}
+
+.two-col .col1,
+.two-col .col2 {
+    width: 49%;
+}
+
+.two-col .col1 {
+    float: left;
+}
+
+.two-col .col2 {
+    float: right;
+}
+
+.two-col label {
+    display: block;
+}
+
+.two-col-climber {
+    overflow: hidden;/* Makes this div contain its floats */
+    background: lightblue;
+    margin: 0.5%;
+    border-style: solid;
+}
+
+.two-col-climber .col1,
+.two-col-climber .col2 {
+    width: 49%;
+}
+
+.two-col-climber .col1 {
+    float: left;
+    margin: 0.5%;
+    background: lightgray;
+}
+
+.two-col-climber .col2 {
+    float: right;
+    margin: 0.5%;
+    background: lightgray;
+}
+
+.two-col-climber label {
+    display: block;
+}

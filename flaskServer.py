@@ -9,12 +9,28 @@ app = Flask(__name__)
 def home():
 
     trip_names = getTripNames()
-    print(trip_names)
+    #print(trip_names)
     
     if request.method == 'POST':
         print(request.form['trip_name'])
+        return redirect(url_for('trip', trip_name=request.form['trip_name']))
 
     return render_template('home.html', trip_names=json.dumps(trip_names))
+
+
+#server logic for trip info page
+@app.route('/trip', methods = ['POST','GET'])
+def trip():
+    trip_name = request.args['trip_name']
+
+    data = getTrip(trip_name)
+    duration = data["duration"]
+    location = data["location"]
+    climbers = json.dumps(data["climbers"])
+    routes = json.dumps(data["routes"])
+    images = json.dumps(data["images"])
+
+    return render_template('trip.html', trip_name=trip_name, duration=duration, location=location, climbers=climbers, routes=routes, images=images)
 
 
 
