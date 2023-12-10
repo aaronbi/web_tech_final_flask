@@ -65,9 +65,11 @@ def initTrips():
             "trip_name":"The Red",
             "duration":"12/9/2023 - 12/16/2023",
             "location":"Red River Gorge",
+            "link":"https://www.mountainproject.com/area/105841134/red-river-gorge",
             "climbers":[bob,tom,tim],
             "routes":[eureka, casual, hazel, cave],
-            "images":[]
+            "images":["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/View_of_Chimney_Top_Rock.JPG/1280px-View_of_Chimney_Top_Rock.JPG", "https://upload.wikimedia.org/wikipedia/commons/e/e6/Red_River_Gorge_-_Motherlode_-_Convicted_1.jpg"],
+            "image_alts":["Chimney top rock", "Rock climbing in The Motherlode area of Red River Gorge"]
             }
     
     with open("files/The_Red.json","w") as out:

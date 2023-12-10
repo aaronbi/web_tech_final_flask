@@ -3,15 +3,22 @@
 	<head>
 		<title>{{trip_name}}</title>
 		<link rel="stylesheet" href="{{ url_for('static', filename='trip.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
 	</head>
 	
 	<body>
+		<ul class="topnav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li class="right"><a href="/login">Login</a></li>
+                </ul>
+
 		<div class="two-col">
 		<h1 class="col1">{{trip_name}}</h1>
 		<h2 class="col2">{{duration}}</h2>
 		</div>
 		
-		<p>Location: {{location}}</p>
+		<p><a href="{{link}}">Location: {{location}}</a></p>
 
 		<h2>Climbers</h2>
 		<div id="climbers"></div>
@@ -62,6 +69,67 @@
 				box.appendChild(gear_container);
 
 				container.appendChild(box);
+			}
+		</script>
+
+
+		<h2>Routes</h2>
+		<div id="routes"></div>
+
+		<script>
+			let container2 = document.getElementById("routes");
+			var route_data = JSON.parse({{routes|tojson}});
+	
+			for (let i=0; i<route_data.length; i++){
+				let box = document.createElement("div");
+				box.className = "two-col-route";
+
+				let name = document.createElement("h3");
+				let link = document.createElement("a");
+				link.innerHTML = route_data[i]["name"];
+				link.href = route_data[i]["link"];
+				name.className = "col1";
+				name.appendChild(link)
+				box.appendChild(name);
+
+				let grade = document.createElement("p");
+				grade.innerHTML = route_data[i]["grade"];
+				grade.className = "col2";
+				box.appendChild(grade);
+
+				let type = document.createElement("p");
+				type.innerHTML = route_data[i]["type"];
+				type.className = "col1";
+				box.appendChild(type);
+
+				container2.appendChild(box);
+			}
+		</script>
+
+		<h2>Images</h2>
+		<div id="images"></div>
+
+		<script>
+			let container3 = document.getElementById("images");
+			var image_data = JSON.parse({{images|tojson}});
+			var image_alts = JSON.parse({{alts|tojson}});
+			for(let i=0; i<image_data.length; i++){
+				let box = document.createElement("div");
+				box.className = "polaroid";
+				let img = document.createElement("img");
+				img.src = image_data[i];
+				img.alt = image_alts[i];
+				
+				let text_container = document.createElement("div");
+				text_container.className = "sub";
+				let text = document.createElement("p");
+				text.innerHTML = image_alts[i];
+				text_container.appendChild(text);
+
+				box.appendChild(img);
+				box.appendChild(text_container);
+
+				container3.appendChild(box);
 			}
 		</script>
 	</body>

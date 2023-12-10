@@ -26,11 +26,12 @@ def trip():
     data = getTrip(trip_name)
     duration = data["duration"]
     location = data["location"]
+    link = data["link"]
     climbers = json.dumps(data["climbers"])
     routes = json.dumps(data["routes"])
     images = json.dumps(data["images"])
-
-    return render_template('trip.html', trip_name=trip_name, duration=duration, location=location, climbers=climbers, routes=routes, images=images)
+    alts = json.dumps(data["image_alts"])
+    return render_template('trip.html', trip_name=trip_name, duration=duration, location=location, link=link, climbers=climbers, routes=routes, images=images, alts=alts)
 
 
 

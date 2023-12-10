@@ -20,7 +20,7 @@
 }
 
 .two-col-climber {
-    overflow: hidden;/* Makes this div contain its floats */
+    overflow: hidden;
     background: lightblue;
     margin: 0.5%;
     border-style: solid;
@@ -45,4 +45,48 @@
 
 .two-col-climber label {
     display: block;
+}
+
+.two-col-route {
+    overflow: hidden;
+    background: #FFD580;
+    margin: 0.5%;
+    border-style: solid;
+}
+
+.two-col-route .col1,
+.two-col-route .col2 {
+    width: 49%;
+}
+
+.two-col-route .col1 {
+    float: left;
+    margin: 0.5%;
+}
+
+.two-col-route .col2 {
+    float: right;
+    margin: 0.5%;
+}
+
+.two-col-route label {
+    display: block;
+}
+
+div.polaroid {
+  width: 30%;
+  float: left;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0.5%;
+}
+
+div.container {
+  width: 30%;
+  text-align: center;
+  padding: 0.5% 1%;
+}
+
+img {
+  width: 100%;
 }
