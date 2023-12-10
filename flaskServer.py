@@ -34,6 +34,10 @@ def trip():
     return render_template('trip.html', trip_name=trip_name, duration=duration, location=location, link=link, climbers=climbers, routes=routes, images=images, alts=alts)
 
 
+#about page
+@app.route('/about', methods = ['POST', 'GET'])
+def about():
+    return render_template('about.html')
 
 #code for starting dev server
 if __name__ == '__main__':

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+	</head>
+
+	<body>
+		<ul class="topnav">
+		<li><a href="/">Home</a></li>
+		<li><a class="active" href="/about">About</a></li>
+		<li class="right"><a href="/login">Login</a></li>
+		</ul>
+
+		<h1>About</h1>
+
+
+
+		<div id="toc_container">
+            <p class="toc_title">Table of Contents</p>
+            <ul class="toc_list">
+            <li><a href="#point1">About Climb Time</a></li>
+            <li><a href="#point2">Basic Information About Climbing</a></li>
+            <li><a href="#point3">Climbing Terminology</a></li>
+            </ul>
+        </div>
+
+        <h2 id="point1">About Climb Time</h2>
+        <p>
+            Welcome to Climb Time! This is a website for planning/organizing outdoor climbing trips. On the home page you
+	    can find a list of planned outdoor climbing trips. In each trip page you can find information about the trip such as
+	    the destination of the trip, climbers that are going along with their skills and gear, planned routes for the trip, information about those routes,
+	    and some photos of the location.
+        </p>
+
+        <h2 id="point2">Basic Information About Climbing</h2>
+        <p>
+            There are 3 main types of climbing outdoors: Bouldering, sport climbing, and trad climbing. Bouldering usually involves shorter routes where the climber
+            doesn't need to tie into a rope and instead just uses a mat or pad below the route to soften the fall. Sport climbing routes are longer and
+            require the climber to tie into a rope which is managed by a belayer. In sport climbing routes the rock already has bolts that have been fixed at 
+            various points along the route, so the climber only needs to bring quickdraws to clip into each bolt.
+	    These bolts are usually drilling and cemented into the wall, so generally they are very stable and strong. This contrasts
+            with trad climbing which requires the climber to take specialized gear up the wall and place pieces of gear into various points (usually cracks in he wall) along the route
+            as they ascend. This form of climbing is inherently more complex and dangerous for the climber, since they are responsible for how well they place their gear
+	    and certain parts of the route may not have any good places to put gear.
+        </p>
+        <p>
+            There are also some singificant differences between climbing inside at a gym and outside on real rock. Generally climbing outside is more dangerous since
+            it is less of a controlled environment. When bouldering outside, climbers will have to bring their own pads to the boulder and will often
+            need a spotter to make sure the climber lands on a pad if they fall. All longer routes outside will either be sport climbing routes or trad routes.
+            Both trad and sport climbing require someone to lead climb the route first. Sport and trad routes will also require
+            the climbers to bring their own gear (quickdraws for sport routes and trad gear for trad routes) and clean the routes afterwards to retrieve the gear that
+            they placed on the way up.
+        </p>
+        <p>
+            The grade of a climb will indicate its difficulty in comparison to other climbs. There are a couple common grading scales used in climbing. French grades
+            are used for both sport climbing and bouldering. YDS (Yosemite Decimal System) grades are used for trad and sport routes (mostly in America). V grades are
+            used for bouldering. All of these grades use numbers and the higher the number the harder the climb. Generally grades outdoors will be harder
+            than grades indoors. So the same boulder graded V5 indoors might be graded V3 outdoors. Difficulty of grades also tend to vary from gym to gym and
+            area to area.
+        </p>
+
+        <h2 id="point3">Climbing Terminology</h2>
+        <dl>
+            <dt>Boulder or Boulder Problem</dt>
+            <dd>Shorter routes intended to be climbed without a rope. Pads are typically used to cushion any falls</dd>
+            <dt>Lead Climbing</dt>
+            <dd>Climbing the route first while placing gear or clipping into bolts for protection</dd>
+            <dt>Top Rope Climbing</dt>
+            <dd>Climbing a route where the rope is already fixed at the top of the route</dd>
+            <dt>Sport Route</dt>
+            <dd>A route that has bolts fixed into the wall that climbers can clip into for protection</dd>
+            <dt>Trad (Traditional) Route</dt>
+            <dd>A route with no bolts. Climbers will have to place their own protection into the wall as they climb</dd>
+            <dt>Belayer</dt>
+            <dd>The person that manages the rope and catches the climber during a fall on roped climbs (trad, sport, lead, top rope)</dd>
+        </dl>
+	</body>
+
+</html>
