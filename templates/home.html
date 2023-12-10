@@ -8,6 +8,21 @@
 
 	<body>
 		<h1>Title</h1>
+		
+		<form id="buttons" action="" method="POST"></form>
+		<script>
+			let trip_buttons = document.getElementById("buttons");
+			var trip_names = JSON.parse({{trip_names|tojson}});
+
+			for (let i=0; i<trip_names.length; i++){
+				let button = document.createElement("button");
+				button.setAttribute("name", "trip_name");
+				button.value = trip_names[i];
+				button.innerHTML = trip_names[i];
+				trip_buttons.appendChild(button);
+			
+			}
+		</script>
 	</body>
 </html>
 

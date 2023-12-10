@@ -1,11 +1,20 @@
 from flask import *
+from handleFiles import *
+import json
 
 app = Flask(__name__)
 
 #server logic for home page
 @app.route("/",methods = ['POST','GET'])
 def home():
-    return render_template('home.html')
+
+    trip_names = getTripNames()
+    print(trip_names)
+    
+    if request.method == 'POST':
+        print(request.form['trip_name'])
+
+    return render_template('home.html', trip_names=json.dumps(trip_names))
 
 
 
