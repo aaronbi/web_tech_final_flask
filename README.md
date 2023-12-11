@@ -8,13 +8,15 @@ default public IP over to Cloudflare. Cloudflare acts as a proxy between the AWS
 # Link
 https://aaronbi.xyz
 # Usage
-If you want to run this locally, you will need to have some package manager (like pip3) and a python installation.
+If you want to run this locally, you will need to have a clone of this repo, some package manager (like pip3), and a python installation.
 
 intall requirements
 ```pip3 install -r requirements.txt```
 
 run the flask server using python
 ```python3 flaskServer.py```
+
+Open the website using the local address the server prints. (it will look something like this http://172.21.20.105:5000/)
 
 # Documentation
 ## .py files
