@@ -4,7 +4,7 @@ uses Flask for most of its serverside operations, HTML/CSS for page structure, J
 of pages, and is deployed using AWS(EC2, gunicorn, nginx, Elastic IPs, Route 53)/Cloudflare.
 
 An EC2 ubuntu instance is running the server using gunicorn and nginx. Elastic Ips and Route 53 are used to redirect the
-default public IP over to Cloudflare. Cloudflare acts as a proxy between the AWS IP and the actual domain for the website.
+default public IP over to Cloudflare. Cloudflare acts as a proxy between the AWS IP and the actual domain for the website (it also enables HTTPS connections).
 # Link
 https://aaronbi.xyz
 # Usage
