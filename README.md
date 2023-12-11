@@ -1,6 +1,6 @@
 # About
-This is the source code for a website for organizing outdoor climbing trips. This project
-uses Flask for most of its serverside operations, HTML/CSS for page structure, JS for dynamic elements
+This is the source code for a website for organizing outdoor climbing trips. More information about the website itself can be found on its [about page](https://aaronbi.xyz/about).
+This project uses Flask for most of its serverside operations, HTML/CSS for page structure, JS for dynamic elements
 of pages, and is deployed using AWS(EC2, gunicorn, nginx, Elastic IPs, Route 53)/Cloudflare.
 
 An EC2 ubuntu instance is running the server using gunicorn and nginx. Elastic Ips and Route 53 are used to redirect the
