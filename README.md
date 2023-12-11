@@ -32,4 +32,4 @@ of the website and the navigation bar.
 
 # /files/
 Data is stored in the files folder. Each 'trip' will have its own .json file containing all the data about that trip. For more information about the structure of
-the json files you can look at ```initFiles.py``` since that is what was used to generate them.
+the json files you can look at ```initData.py``` since that is what was used to generate them.
