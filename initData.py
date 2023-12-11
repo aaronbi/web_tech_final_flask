@@ -60,7 +60,8 @@ def initTrips():
             "type":"Trad, 200ft, 4 pitches",
             "link":"https://www.mountainproject.com/route/105882024/cavers-route"
             }
-
+    
+    #putting together the final .json object for this trip "The Red" 
     trip1 = {
             "trip_name":"The Red",
             "duration":"12/9/2023 - 12/16/2023",
@@ -90,6 +91,8 @@ def initTrips():
             'type':'Trad, Aid, 3000ft 31 pitches',
             'link':'https://www.mountainproject.com/route/105924807/the-nose'
             }
+
+    #another trip .json
     trip2 = {
             'trip_name':'Speed Climbing The Nose',
             'duration':'2018/06/06',
@@ -103,6 +106,7 @@ def initTrips():
     with open('files/Speed_Climbing_The_Nose.json', 'w') as out:
         json.dump(trip2, out)
 
+#building and saving the .json files
 if __name__ == '__main__':
     initTrips()
 
