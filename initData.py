@@ -33,7 +33,7 @@ def initTrips():
             "gear": ["no"]
           }
 
-    #some random routes
+    #some random routes from RRG
     eureka = {
             "name":"Eureka",
             "grade":"5.6",
@@ -74,7 +74,14 @@ def initTrips():
     
     with open("files/The_Red.json","w") as out:
         json.dump(trip1, out)
+    
 
+
+    
 
 if __name__ == '__main__':
     initTrips()
+
+
+
+

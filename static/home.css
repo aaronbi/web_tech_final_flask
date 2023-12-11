@@ -1,4 +1,23 @@
-h1 {
-    color: blue;
-    margin:auto;
+button {
+  background-color: #333;
+  color: white;
+  padding: 2% 5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #666;
+}
+button:hover {
+  background-color: #0091ff;
+  color: white;
+}
+
+button:active {
+  background-color: #0091ff;
+  box-shadow: 0 5px #888;
+  transform: translateY(4px);
 }
