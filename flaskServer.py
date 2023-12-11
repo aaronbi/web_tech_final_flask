@@ -39,6 +39,11 @@ def trip():
 def about():
     return render_template('about.html')
 
+#login page (unfinished)
+@app.route('/login', methods = ['POST', 'GET'])
+def login():
+    return render_template('login.html')
+
 #code for starting dev server
 if __name__ == '__main__':
     app.secret_key = 'secret key abc'
