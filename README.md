@@ -1,7 +1,10 @@
 # About
 This is the source code for a website for organizing outdoor climbing trips. This project
 uses Flask for most of its serverside operations, HTML/CSS for page structure, JS for dynamic elements
-of pages, and is deployed using AWS(gunicorn, nginx, Elastic IPs, Route 53)/Cloudflare.
+of pages, and is deployed using AWS(EC2, gunicorn, nginx, Elastic IPs, Route 53)/Cloudflare.
+
+An EC2 ubuntu instance is running the server using gunicorn and nginx. Elastic Ips amnd Route 53 are used to redirect the
+default public IP over to Cloudflare. Cloudflare acts as a proxy between the AWS IP and the actual domain for the website.
 # Link
 https://aaronbi.xyz
 # Usage
