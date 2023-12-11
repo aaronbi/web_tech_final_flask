@@ -13,3 +13,19 @@ intall requirements
 run the flask server using python
 ```python3 flaskServer.py```
 
+# Documentation
+## .py files
+Most of the server logic and page routing/rendering is handled in ```flaskServer.py```. Each page has its own function
+that will request or pass data as needed.
+
+```handleFiles.py``` handles the fetching of data from the .json files in the /files folder. There is also a short __main__ for testing
+some of the functionality of the functions.
+
+```initData.py``` was used to create the test data currently stored in /files. The server doesn't actively use any of the functions there. You can
+run this file to reset the .json files in case they get corrupted somehow. ```python3 initData.py```
+## HTML/CSS/JS
+All of the HTML is stored in the /templates folder. Each page has its own .html file. Some of these files also have some JS to dynamically populated
+the page based on the saved data it is passed.
+
+All CSS is stored in the /static folder. Each page has its own .css file for styling. There is also a general.css and nav.css file for the overall styling/color
+of the website and the navigation bar.
