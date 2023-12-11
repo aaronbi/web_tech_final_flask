@@ -156,13 +156,13 @@ def initTrips():
             }
     toit = {
             'name':'Toit du Lepiney',
-            'level':'V4+',
+            'grade':'V4+',
             'type':'Boulder',
             'link':'https://www.mountainproject.com/route/113316863/toit-du-lepiney'
             }
     rainbow = {
             'name': 'Rainbow Rocket',
-            'level':'V11',
+            'grade':'V11',
             'type':'Boulder',
             'link':'https://www.mountainproject.com/route/123838667/rainbow-rocket'
             }
