@@ -1,7 +1,7 @@
 # About
 This is the source code for a website for organizing outdoor climbing trips. This project
 uses Flask for most of its serverside operations, HTML/CSS for page structure, JS for dynamic elements
-of pages, and is deployed on Zeet/Cloudflare.
+of pages, and is deployed using AWS(gunicorn, nginx, Elastic IPs, Route 53)/Cloudflare.
 # Link
 https://aaronbi.xyz
 # Usage
