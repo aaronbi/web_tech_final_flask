@@ -62,7 +62,7 @@
 				let gear_title = document.createElement("h3");
 				gear_title.innerHTML = "Gear";
 				gear_container.appendChild(gear_title);
-				for (let j=0; j<skills.length; j++){
+				for (let j=0; j<gear.length; j++){
 					let item = document.createElement("p");
 					item.innerHTML = gear[j];
 					gear_container.appendChild(item);
@@ -95,12 +95,12 @@
 
 				let grade = document.createElement("p");
 				grade.innerHTML = route_data[i]["grade"];
-				grade.className = "col2";
+				grade.className = "col1";
 				box.appendChild(grade);
 
 				let type = document.createElement("p");
 				type.innerHTML = route_data[i]["type"];
-				type.className = "col1";
+				type.className = "col2";
 				box.appendChild(type);
 
 				container2.appendChild(box);

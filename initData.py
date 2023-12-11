@@ -22,7 +22,7 @@ def initTrips():
     honnold = {
             "name":"Alex Honnold",
             "level":"5.14d/V12",
-            "skills":["free soloing", "trad climbing", "lead climbing", "route cleaning", "top rope belayer", "lead belayer"],
+            "skills":["free soloing", "trad climbing", "lead climbing",'big walling' "route cleaning", "top rope belayer", "lead belayer"],
             "gear": ["chalk", "shoes", "snacks"]
           }
     
@@ -76,8 +76,32 @@ def initTrips():
         json.dump(trip1, out)
     
 
+    tommy = {
+            "name":"Tommy Caldwell",
+            'level':'5.15a/V13',
+            'skills':["free soloing", "trad climbing", "lead climbing",'big walling' "route cleaning", "top rope belayer", "lead belayer"],
+            'gear':["yes"]
+            }
 
-    
+    #routes from yosemite
+    nose = {
+            'name':'The Nose',
+            'grade':'5.9',
+            'type':'Trad, Aid, 3000ft 31 pitches',
+            'link':'https://www.mountainproject.com/route/105924807/the-nose'
+            }
+    trip2 = {
+            'trip_name':'Speed Climbing The Nose',
+            'duration':'2018/06/06',
+            'location':'Yosemite NP',
+            'link':'https://www.mountainproject.com/area/105833381/yosemite-national-park',
+            'climbers':[honnold, tommy],
+            'routes':[nose],
+            'images':['https://mountainproject.com/assets/photos/climb/113207490_large_1498309301.jpg?cache=1702170121'],
+            'image_alts':['Route Overlay for a 3-Day Ascent of the Nose']
+            }
+    with open('files/Speed_Climbing_The_Nose.json', 'w') as out:
+        json.dump(trip2, out)
 
 if __name__ == '__main__':
     initTrips()
