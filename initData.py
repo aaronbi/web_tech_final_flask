@@ -1,7 +1,7 @@
 import json
 
 
-#resets the test data in files
+#initializes and resets the test data
 def initTrips():
 
     #some random climber data
@@ -9,7 +9,7 @@ def initTrips():
             "name":"Bob",
             "level":"5.10c/V2",
             "skills":["lead climbing", "route cleaning", "top rope belayer", "lead belayer"],
-            "gear": ["quickdraws", "slings", "60m rope", "ATC", "Grigri", "quad anchor"]
+            "gear": ["quickdraws", "slings", "60m rope", "ATC", "Grigri", "quad anchor", 'crash pads']
           }
 
     tom = {
@@ -105,6 +105,80 @@ def initTrips():
             }
     with open('files/Speed_Climbing_The_Nose.json', 'w') as out:
         json.dump(trip2, out)
+
+    #some data for trip 3
+    ondra = {
+            'name':'Adam Ondra',
+            'level':'5.15d/V16',
+            'skills':['extremely strong', 'world class sport climber', 'big walling', 'professional competition climber'],
+            'gear':['a lot of shoes', 'all the essentials']
+            }
+    jakob = {
+            'name':'Jakon Schubert',
+            'level':'5.15d/V15',
+            'skills':['extremely strong', 'olympic bronze medalist', 'professional competition climber'],
+            'gear':['all the essentials']
+            }
+    silence = {
+            'name':'Silence',
+            'grade':'5.15d',
+            'type': 'Sport, 150ft',
+            'link':'https://www.mountainproject.com/route/120399023/silence'
+            }
+    trip3 = {
+            'trip_name':'Flatanger',
+            'duration':'12/11/23-12/14/23',
+            'location':'Flatanger, Norway',
+            'link':'https://www.mountainproject.com/area/110748026/flatanger',
+            'climbers':[ondra, jakob],
+            'routes':[silence],
+            'images':['https://upload.wikimedia.org/wikipedia/commons/8/8e/Hanshelleren.JPG',
+                'https://upload.wikimedia.org/wikipedia/commons/5/55/Adam_Ondra_climbing_Silence%2C_9c_by_PAVEL_BLAZEK_1.jpg', 'https://gripped.com/wp-content/uploads/2022/12/Jakob-Schubert-Project-Big.jpg'],
+            'image_alts':['Hanshelleren cave in Flatanger','Adam Ondra on the second crux of Silence', 'Jakob Schubert resting with a double kneebar on B.I.G.']
+            }
+    with open('files/Flatanger.json','w') as out:
+        json.dump(trip3, out)
+
+
+    #random data for trip 4
+    aaron = {
+            'name':'Aaron Bi',
+            'level':'5.10c/V3',
+            'skills':['sport climbing', 'route cleaning', 'lead belaying'],
+            'gear':['quickdraws', 'slings', 'ATC', '1 crash pad', 'quad anchor']
+            }
+
+    marie = {
+            'name':'La Marie-Rose',
+            'grade':'V3',
+            'type':'Boulder',
+            'link':'https://www.mountainproject.com/route/119450250/la-marie-rose'
+            }
+    toit = {
+            'name':'Toit du Lepiney',
+            'level':'V4+',
+            'type':'Boulder',
+            'link':'https://www.mountainproject.com/route/113316863/toit-du-lepiney'
+            }
+    rainbow = {
+            'name': 'Rainbow Rocket',
+            'level':'V11',
+            'type':'Boulder',
+            'link':'https://www.mountainproject.com/route/123838667/rainbow-rocket'
+            }
+    trip4 = {
+            'trip_name':'Fontainebleau',
+            'duration':'1/1/2024-1/30/24',
+            'location':'Fontainebleau, France',
+            'link':'https://www.mountainproject.com/area/106008886/fontainebleau',
+            'climbers':[aaron, bob, ondra, honnold, tommy],
+            'routes':[marie,toit,rainbow],
+            'images':['https://goingupthecountry.net/wp-content/uploads/2023/08/IMG-20220917-WA0040-01.jpeg','https://bleau.info/images/bart.van.raaij/CarriersRainbowRocket.jpg'],
+            'image_alts':['a bouldering area in fontainebleau', 'Rainbow Rocket V11']
+            }
+    with open('files/Fontainebleau.json','w') as out:
+        json.dump(trip4, out)
+
 
 #building and saving the .json files
 if __name__ == '__main__':

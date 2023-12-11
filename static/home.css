@@ -10,7 +10,7 @@ button {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #666;
-  margin: 0.5%;
+  margin: 5px;
 }
 button:hover {
   background-color: #0091ff;
