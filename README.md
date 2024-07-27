@@ -6,7 +6,7 @@ of pages, and is deployed using AWS(EC2, gunicorn, nginx, Elastic IPs, Route 53)
 An EC2 ubuntu instance is running the server using gunicorn and nginx. Elastic Ips and Route 53 are used to redirect the
 default public IP over to Cloudflare. Cloudflare acts as a proxy between the AWS IP and the actual domain for the website (it also enables HTTPS connections).
 # Link
-https://aaronbi.xyz
+https://aaronbi.xyz (Web server is no longer running)
 # Usage
 If you want to run this locally, you will need to have a clone of this repo, some package manager (like pip3), and a python installation.
 
